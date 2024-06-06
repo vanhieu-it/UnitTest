@@ -31,8 +31,16 @@ Maven
     <version>3.12.4</version>
     <scope>test</scope>
 </dependency>
+
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-params</artifactId>
+    <version>5.8.1</version>
+    <scope>test</scope>
+</dependency>
 ```
 Gradle
 ```groovy
 testImplementation 'org.mockito:mockito-core:3.12.4'
+testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.1'
 ```
