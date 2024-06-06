@@ -1,6 +1,6 @@
 package org.example;
 
-public class CalculatorService extends Calculator{
+public class CalculatorService {
     private Calculator calculator;
 
     public CalculatorService(Calculator calculator) {
