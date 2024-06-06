@@ -2,6 +2,8 @@ import org.example.Calculator;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 public class CalculatorTest {
     @Test
@@ -24,5 +26,16 @@ public class CalculatorTest {
         assertThrows(ArithmeticException.class, () -> {
             calculator.divide(1,0);
         });
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "1, 1, 2",
+            "2, 3, 5",
+            "10, 20, 30"
+    })
+    public void testAdd(int a, int b, int expectd){
+        Calculator calculator = new Calculator();
+        assertEquals(expectd, calculator.add(a,b));
     }
 }
